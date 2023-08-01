@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>My Synagogue</title>
+            
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+            <link rel="manifest" href="/site.webmanifest">
+
+            <link rel="stylesheet" href="printing_styles.css" media="print">
+            <link rel="stylesheet" href="new_styles.css">
+        </head>
+        <body onload="loadData(), initialize()">
+            <script src="main.js"></script>
+            <div class="title-wrapper" id="title-wrapper">
+                <h1 id="main-title">רשימת מתפללים</h1>
+                <h3 id="portionTitle"></h3>
+                <ul>
+                    <li class="table-headers">
+                        <span class="header">הערה</span> 
+                        <span class="header">זכות</span>     
+                        <span class="header">חובה</span>
+                        <span class="header">שם</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="table-wrapper" id="table-wrapper">
+                <ul class="prayers-list" id="prayers-list">
+                </ul>
+            </div>
+            <div class="bottom-wrapper" id="bottom-wrapper">
+                <div class="add-prayer-input">
+                    <button id="removePrayerButton" onclick="removePrayer()" class="gettingInput">הסר מתפלל</button>
+                    <input id="newPrayerName" type="text" class="gettingInput" placeholder="שם מלא">
+                    <button id="addPrayerButton" onclick="addPrayer()" class="add-prayer-name-input">הוסף</button>
+                </div>
+                <div class="add-prayer-input">
+                    <button onclick="saveData()" class="gettingInput">שמור</button>
+                    <button id="clearTableButton" onclick="clearTable()" class="gettingInput">נקה טבלה</button>
+                    <button onclick="window.print()" class="gettingInput">הדפס</button>
+
+                </div>
+                <div class="update-prayer-input">
+                    <div class="text-div">
+                        <span id="explaining-text">סכום חיובי - זכות<br>סכום שלילי - חובה</span>
+                    </div>
+                    <div class="input-div">
+                        <div>
+                            <input class="gettingInput" id="updatedComment" type="text" placeholder="עדכן הערה">
+                            <input class="gettingInput" id="updatedMoney" type="text" placeholder="הכנס סכום">
+                            <input class="gettingInput" id="updatedName" type="text" placeholder="שם מלא" list="existing-names-options">   
+                        </div>
+                        <div>
+                            <button class="gettingInput" id="updatePrayerButton" onclick="updateStatus()">עדכן מתפלל</button>
+                            <datalist id="existing-names-options">
+                            </datalist> 
+                        </div>
+                        <div style="border-top: 1.5px dotted black; width:100%;">
+                            <button class="gettingInput" id="updatePortionButton" onclick="updateWeeklyPortion()">עדכן פרשה</button>
+                            <input class="gettingInput" id="updated-portion-name" type="text" placeholder="שם הפרשה" list="existing-weekly-portions">   
+                            <datalist id="existing-weekly-portions">
+                                <option>בראשית</option>
+                                <option>נח</option>
+                                <option>לך לך</option>
+                                <option>וירא</option>
+                                <option>חיי שרה</option>
+                                <option>תולדות</option>
+                                <option>ויצא</option>
+                                <option>וישלח</option>
+                                <option>וישב</option>
+                                <option>מקץ</option>
+                                <option>ויגש</option>
+                                <option>ויחי</option>
+                                <option>שמות</option>
+                                <option>וארא</option>
+                                <option>בא</option>
+                                <option>בשלח</option>
+                                <option>יתרו</option>
+                                <option>משפטים</option>
+                                <option>תרומה</option>
+                                <option>תצוה</option>
+                                <option>כי תשא</option>
+                                <option>ויקהל</option>
+                                <option>פקודי</option>
+                                <option>ויקהל-פקודי</option>
+                                <option>ויקרא</option>
+                                <option>צו</option>
+                                <option>שמיני</option>
+                                <option>תזריע</option>
+                                <option>מצורע</option>
+                                <option>אחרי מות</option>
+                                <option>קדושים</option>
+                                <option>אמור</option>
+                                <option>בהר</option>
+                                <option>בחוקותי</option>
+                                <option>תזריע-מצורע</option>
+                                <option>אחרי-קדושים</option>
+                                <option>בהר-בחוקותי</option>
+                                <option>במדבר</option>
+                                <option>נשא</option>
+                                <option>בהעלותך</option>
+                                <option>שלח</option>
+                                <option>קורח</option>
+                                <option>חוקת</option>
+                                <option>בלק</option>
+                                <option>פינחס</option>
+                                <option>מטות</option>
+                                <option>מסעי</option>
+                                <option>חוקת-בלק</option>
+                                <option>מטות-מסעי</option>
+                                <option>דברים</option>
+                                <option>ואתחנן</option>
+                                <option>עקב</option>
+                                <option>ראה</option>
+                                <option>שופטים</option>
+                                <option>כי תצא</option>
+                                <option>כי תבוא</option>
+                                <option>ניצבים</option>
+                                <option>ניצבים-וילך</option>
+                                <option>וילך</option>
+                                <option>האזינו</option>
+                                <option>ברכה</option>
+                            </datalist> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

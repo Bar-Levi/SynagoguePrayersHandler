@@ -1,0 +1,201 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  word-break: keep-all;
+  cursor: auto; 
+  user-select: none;
+
+}
+
+.title-wrapper {
+  background-color: lightgray;
+  position: sticky;
+  top: 0;
+  font-size: calc(2vw + 2vh);
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.title-wrapper h1 {
+  padding: 0vh;
+  margin: 0;
+}
+.title-wrapper span {
+  font-size: 4vh;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+ul li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+ul li span {
+  width: 25%;
+  border: 1px solid lightgray;
+}
+
+.comment {
+  word-break: keep-all;
+  overflow-x: auto;
+  white-space: nowrap;
+
+}
+.table-headers span {
+  width: 25%;
+  border: 1px solid black;
+}
+
+.table-wrapper {
+  visibility: visible;
+  overflow-y: scroll;
+  font-size: calc(2vw + 2vh);
+
+}
+.table-wrapper .prayers-list li:nth-child(even) {
+  background: whitesmoke;
+}
+.table-wrapper .prayers-list li:nth-child(odd) {
+  background: snow;
+}
+
+.bottom-wrapper {
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 3px solid black;
+  background-color: lightgray;
+}
+.bottom-wrapper .add-prayer-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bottom-wrapper .update-prayer-input {
+  min-width: 100%;
+  border-top: 1.5px dotted black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-wrapper .update-prayer-input div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bottom-wrapper .update-prayer-input div span {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  font-size: 4vh;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #333333;
+}
+
+button {
+  width: 30vw;
+  height: 3vh;
+  font-size: calc(1.5vh+ 1.5vw);
+  margin-right: 0;
+  background-color:rgba(1, 9, 3, 0.533);
+  color: white;
+  border: none;;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px 3px;
+  line-height: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+input {
+  width: 30vw;
+  height: 2vh;
+  font-size: calc(1.5vw + 1.5vh);
+
+
+  text-align: center;
+  align-items: start;
+  margin: 5px;
+
+  padding: 5px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+input::-moz-placeholder {
+  /* Define the default placeholder color */
+  color: initial;
+}
+
+input::placeholder {
+  /* Define the default placeholder color */
+  color: #aeaeae;
+
+}
+
+input.error::-moz-placeholder {
+  /* Define the placeholder color when an error occurs */
+  color: red;
+}
+
+input.error::placeholder {
+  /* Define the placeholder color when an error occurs */
+  color: red;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}/*# sourceMappingURL=new_styles.css.map */
+
+.input-div div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=new_styles.css.map */
+
+@media screen and (max-width: 350px){
+  button, input, span {
+    font-size: calc(3vw + 1vh);
+  }
+}
+
+h3 {
+  direction: rtl;
+  font-size: calc(1.25vw+1.25vh);
+  margin: 5px 0;
+}

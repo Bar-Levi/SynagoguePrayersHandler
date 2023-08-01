@@ -1,0 +1,44 @@
+body {
+    padding: 10px 0;
+}
+
+.bottom-wrapper {
+    visibility: hidden;
+}
+
+.title-wrapper  { 
+    max-height:20vh;
+    width: 100%;
+}
+.title-wrapper h1 {
+    font-size: 3vh;
+}
+
+.table-headers .header, h3 {
+    font-size: 2vh;
+}
+
+.table-wrapper {
+    visibility: visible;
+    min-height: 80%;
+    max-height: 80%;
+}
+
+.title-wrapper span {
+    font-size: 3.5vh;
+}
+
+ul {
+    max-height: 2%;
+}
+ul li {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 3px solid black;
+  }
+
+  ul li span {
+    font-weight: bold;
+    font-size: 1.5vh;
+}
