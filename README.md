@@ -1,8 +1,8 @@
-# SynagoguePrayerTracker
+# SynagoguePrayersTracker
 
-**Description:** SynagoguePrayerTracker is a web application for managing a list of prayer attendees at a synagogue. It allows you to add, update, and remove attendees, as well as track their prayer status and weekly portion.
+**Description:** SynagoguePrayersTracker is a web application for managing a list of prayer attendees at a synagogue. It allows you to add, update, and remove attendees as well as track their prayer status and weekly portion.
 
-<img width="690" alt="צילום מסך 2023-08-01 ב-15 23 03" src="https://github.com/Bar-Levi/SynagoguePrayerTracker/assets/98148899/c66c36be-6cd4-42d5-9cc0-52222b2abf70">
+<img width="690" alt="SynagoguePrayersTracker usage screenshot." src="https://github.com/Bar-Levi/SynagoguePrayerTracker/assets/98148899/c66c36be-6cd4-42d5-9cc0-52222b2abf70">
 
 
 ## Features
